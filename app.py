@@ -13,7 +13,6 @@ def generate_short_url_path(url, char_limit=6):
 def get_url():
     if request.method == 'POST':
         input_url = request.form['url']
-        short_url_path = ''
         short_url_path = generate_short_url_path(input_url)
         redirect_urls[short_url_path] = input_url
         return render_template('home.html', new_url=base_url+short_url_path, old_url=input_url)
