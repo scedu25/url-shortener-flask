@@ -1,4 +1,3 @@
-from unittest.mock import MagicMock
 from app import generate_short_url_path
 import unittest
 
